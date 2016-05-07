@@ -57,7 +57,7 @@ delete-delay: 5000
 lines: # You can add HTML Tags in the Text
   - text: "I'm always outspoken and keep my word,and that's just my way."
 
-me-img: "/img/20160411231400_yVK3c.thumb.700_0.gif"
+me-img: "/img/author.png"
 
 ##############################
 # Color the browser elements #
