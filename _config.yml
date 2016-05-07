@@ -16,7 +16,7 @@ url: "http://gluneko.github.io"
 
 # Google tracking id to track your visitors
 
-google-tracking-id: "UA-35880426-4"
+google-tracking-id: ""
 
 # Forces https everywhere in your website, except when you serve it locally
 # If you are not hosted on Github Pages, and your host doesn't support https
@@ -29,7 +29,7 @@ force-https: False
 #############
 
 lang: "en"
-author: "John Smith"
+author: "Melonpi"
 title: "{ Melonpi }"
 description: "Cathouse of Melonpi, blogging for code learning."
 keywords: "Melonpi, c++"
@@ -55,8 +55,7 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "The lower you fall, the higher you'll fly."
-  - text: "Where’s your will to be weird?"
+  - text: "I'm always outspoken and keep my word,and that's just my way."
 
 me-img: "/img/jetpacktocat.png"
 
@@ -124,7 +123,7 @@ timeline-img: "/img/timeline/default.png"
 # Contact #
 ###########
 
-email: "your@email.here"
+email: "844410616@qq.com"
 
 ################
 # Author Blurb #
@@ -134,7 +133,7 @@ email: "your@email.here"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: "John Smith is an awesome person. He lives in Flatland, where he works on two-dimensional engineering projects. In his spare time, John likes to eat cotton candy."
+author_blurb: "Melonpi is an awesome person. He lives in Flatland, where he works on two-dimensional engineering projects. In his spare time, John likes to eat cotton candy."
 author_blurb_image: "/img/author.png"
 
 ##################
