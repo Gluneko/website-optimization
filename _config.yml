@@ -41,7 +41,7 @@ favicon: "/img/favicon.ico"
 
 black-favicon: "/img/black-lab-glass.ico"
 
-background-img: "img/intro-bg.jpg"
+background-img: "../img/a9506dd8daa25b6f4d4c1a3d36417e27_r.jpg.png"
 
 ##############################
 # Dynamic Text on the Header #
@@ -57,7 +57,7 @@ delete-delay: 5000
 lines: # You can add HTML Tags in the Text
   - text: "I'm always outspoken and keep my word,and that's just my way."
 
-me-img: "/img/author.png"
+me-img: "/img/20160411231400_yVK3c.thumb.700_0.gif"
 
 ##############################
 # Color the browser elements #
