@@ -41,7 +41,7 @@ favicon: "/img/favicon.ico"
 
 black-favicon: "/img/black-lab-glass.ico"
 
-background-img: "../img/a9506dd8daa25b6f4d4c1a3d36417e27_r.jpg.png"
+background-img: "/img/a9506dd8daa25b6f4d4c1a3d36417e27_r.jpg.png"
 
 ##############################
 # Dynamic Text on the Header #
