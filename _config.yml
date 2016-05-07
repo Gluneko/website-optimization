@@ -108,16 +108,16 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/spidertocat.png"
+  - image: "/img/timeline/zju.jpg"
     date: "September 2015 - Today"
     description: "Starting coding seriously..."
-  - image: "/img/timeline/baracktocat.jpg"
+  - image: "/img/timeline/nuaa.png"
     date: "September 2011 - August 2015"
     description: "Learned mechanical design..."
 
 # First image of the Timeline
 
-timeline-img: "/img/timeline/default.png"
+timeline-img: "/img/timeline/default1.jpg"
 
 ###########
 # Contact #
@@ -134,7 +134,7 @@ email: "844410616@qq.com"
 
 # if the author_blurb is not set, then this feature is skipped
 author_blurb: "Melonpi is a sparky person. He is a graduate student in China."
-author_blurb_image: "/img/author.png"
+author_blurb_image: "/img/author.jpg"
 
 ##################
 # Social Buttons #
@@ -146,9 +146,9 @@ social:
   - title: "twitter"
     url: "https://twitter.com/"
   - title: "github"
-    url: "https://github.com/PanosSakkos/personal-jekyll-theme"
-  - title: "bitcoin"
-    url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
+    url: "https://github.com/Gluneko/Gluneko.github.io"
+  #- title: "bitcoin"
+   # url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
   - title: "rss"
     url: "/feed.xml"
 
