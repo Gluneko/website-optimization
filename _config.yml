@@ -22,7 +22,7 @@ google-tracking-id: "UA-35880426-4"
 # If you are not hosted on Github Pages, and your host doesn't support https
 # then you should disable it
 
-force-https: True
+force-https: False
 
 #############
 # HTML Head #
@@ -30,9 +30,9 @@ force-https: True
 
 lang: "en"
 author: "John Smith"
-title: "{ 曾天 }"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
+title: "{ Melonpi }"
+description: "Cathouse of Melonpi, blogging for code learning."
+keywords: "Melonpi, c++"
 favicon: "/img/favicon.ico"
 
 ################
