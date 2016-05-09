@@ -14,8 +14,7 @@ You may assume that the array is non-empty and the majority element always exist
 
 这道题让我们求出现次数大于n/2的众数，使用摩尔投票法 Moore Voting,时间复杂度O(n),空间复杂度O(1).首先将第一个数字设为众数，计数器置为1，比较下一个数和此数是否相等，若相等计数器加一，不相等则成对删除，计数器减一。然后看计数器的值，若为0，则将当前值设为候选众数。以此类推直到遍历完整个数组，当前候选众数即为该数组的众数。代码如下：
 
-<pre><code data-trim class="c">
-{% raw %}
+```cpp
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
@@ -29,8 +28,7 @@ public:
         return m;
     }
 };
-{% endraw %}
-</code></pre>
+```
 
 ### Majority Element II
 
