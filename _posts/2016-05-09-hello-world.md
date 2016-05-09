@@ -36,13 +36,12 @@ Given an integer array of size n, find all elements that appear more than &nbsp;
 
 Hint:
 
-    How many majority elements could it possibly have?
-    Do you have a better hint? Suggest it!
+   How many majority elements could it possibly have?
+   Do you have a better hint? Suggest it!
 	
 这道题让我们求出现次数大于n/3的众数，并且题目中提示让我们考虑可能有多少个众数，易证任意一个数组出现次数大于n/3的众数最多有两个，并且前一题中限定了一定会有众数存在而这题却没有，所以额外需要一轮投票验证候选众数。第一轮遍历找出两个候选众数（与上题一样），第二轮遍历重新投票验证这两个候选众数是否为众数。代码如下：
 
-<pre><code data-trim class="c">
-{% raw %}
+```cpp
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
@@ -67,7 +66,6 @@ public:
         return res;
     }
 };
-{% endraw %}
-</code></pre>
+```
 
 <small>参考资料：<a href="http://www.cnblogs.com/grandyang/p/4233501.html" target="\_blank">Grandyang的博客</a></small>
