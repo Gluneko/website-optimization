@@ -99,7 +99,7 @@ pinterest-share: True
 pocket-share: True
 vkontakte-share: True
 
-disqus-shortname: "panossakkos"
+#disqus-shortname: "panossakkos"
 
 syntax-highlight: True
 
@@ -133,8 +133,8 @@ email: "844410616@qq.com"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: "Melonpi is a sparky person. He is a graduate student in China."
-author_blurb_image: "/img/author.jpg"
+author_blurb: "Oh my gosh,look at her butt!"
+author_blurb_image: "/img/melonpi.jpg"
 
 ##################
 # Social Buttons #
@@ -156,7 +156,7 @@ social:
 # 404 page #
 ############
 
-404-img: "/img/labtocat.png"
+404-img: "/img/author.jpg"
 
 ################################################################################
 
