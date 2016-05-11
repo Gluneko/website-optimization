@@ -8,13 +8,14 @@ tags: [ 'array' ]
 
 ### Container With Most Water
 
-Given n non-negative integers *a_1*, *a_2*, ..., *a_n*, where each represents a point at coordinate (*i*, *a_i*). *n* vertical lines are drawn such that the two endpoints of line *i* is at (*i*, *a_i*) and (*i*, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Given n non-negative integers *a<sub>1</sub>*, *a<sub>2</sub>*, ..., *a<sub>n</sub>*, where each represents a point at coordinate (*i*, *a<sub>i</sub>*). *n* vertical lines are drawn such that the two endpoints of line *i* is at (*i*, *a<sub>i</sub>*) and (*i*, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
 
 Note: You may not slant the container. 
 
-ÌâÒâ£ºÓĞ¸ö¸ß¶ÈÊı×é£¬¾ÍÏàµ±ÓÚ¸ô°åµÄ¸ß¶È£¬ÇóÊı×éÖĞÈÎÒâÁ½¸ô°å¼äÊ¢Ë®µÄ×î´óÁ¿¡£¸ô°å¼äµÄ¾àÀëÓë½ÏµÍ¸ô°åµÄ¸ß¶È³Ë»ı¼´ÎªÊ¢Ë®µÄÈİÁ¿¡£
+é¢˜æ„ï¼šæœ‰ä¸ªé«˜åº¦æ•°ç»„ï¼Œå°±ç›¸å½“äºéš”æ¿çš„é«˜åº¦ï¼Œæ±‚æ•°ç»„ä¸­ä»»æ„ä¸¤éš”æ¿é—´ç››æ°´çš„æœ€å¤§é‡ã€‚éš”æ¿é—´çš„è·ç¦»ä¸è¾ƒä½éš”æ¿çš„é«˜åº¦ä¹˜ç§¯å³ä¸ºç››æ°´çš„å®¹é‡ã€‚
 
-´ğ°¸ÊÇÓÃÁ½¸öÖ¸Õë´ÓÁ½¶Ë¿ªÊ¼ÏòÖĞ¼ä¿¿Â££¬Èç¹û×ó¶ËÏß¶Î¶ÌÓÚÓÒ¶Ë£¬ÄÇÃ´×ó¶ËÓÒÒÆ£¬·´Ö®ÓÒ¶Ë×óÒÆ£¬Ö±µ½×óÓÒÁ½¶ËÒÆµ½ÖĞ¼äÖØºÏ£¬±È½ÏÕâ¸ö¹ı³ÌÖĞÃ¿Ò»´Î×é³ÉÄ¾Í°µÄÈİ»ı£¬·µ»ØÆäÖĞ×î´óµÄ¡£Ê±¼ä¸´ÔÓ¶ÈO(n),¿Õ¼ä¸´ÔÓ¶ÈO(1).½âÊÍ£ºµ±×ó¶ËÏß¶ÎleftĞ¡ÓÚÓÒ¶ËÏß¶ÎrightÊ±£¬ÎÒÃÇ°ÑleftÓÒÒÆ£¬ÕâÊ±ÉáÆúµÄÊÇleftÓëÓÒ¶ËÆäËûÏß¶Î£¨right-1, right-2, ...£©×é³ÉµÄÄ¾Í°£¬ÕâĞ©Ä¾Í°ÊÇÃ»±ØÒªÅĞ¶ÏµÄ£¬ÒòÎªÕâĞ©Ä¾Í°µÄÈİ»ı¿Ï¶¨¶¼Ã»ÓĞleftºÍright×é³ÉµÄÄ¾Í°Èİ»ı´ó,·´Ö®Í¬Àí¡£´úÂëÈçÏÂ£º
+ç­”æ¡ˆæ˜¯ç”¨ä¸¤ä¸ªæŒ‡é’ˆä»ä¸¤ç«¯å¼€å§‹å‘ä¸­é—´é æ‹¢ï¼Œå¦‚æœå·¦ç«¯çº¿æ®µçŸ­äºå³ç«¯ï¼Œé‚£ä¹ˆå·¦ç«¯å³ç§»ï¼Œåä¹‹å³ç«¯å·¦ç§»ï¼Œç›´åˆ°å·¦å³ä¸¤ç«¯ç§»åˆ°ä¸­é—´é‡åˆï¼Œæ¯”è¾ƒè¿™ä¸ªè¿‡ç¨‹ä¸­æ¯ä¸€æ¬¡ç»„æˆæœ¨æ¡¶çš„å®¹ç§¯ï¼Œè¿”å›å…¶ä¸­æœ€å¤§çš„ã€‚æ—¶é—´å¤æ‚åº¦O(n),ç©ºé—´å¤æ‚åº¦O(1).è§£é‡Šï¼šå½“å·¦ç«¯çº¿æ®µleftå°äºå³ç«¯çº¿æ®µrightæ—¶ï¼Œæˆ‘ä»¬æŠŠleftå³ç§»ï¼Œè¿™æ—¶èˆå¼ƒçš„æ˜¯leftä¸å³ç«¯å…¶ä»–çº¿æ®µï¼ˆright-1, right-2, ...ï¼‰ç»„æˆçš„æœ¨æ¡¶ï¼Œè¿™äº›æœ¨æ¡¶æ˜¯æ²¡å¿…è¦åˆ¤æ–­çš„ï¼Œå› ä¸ºè¿™äº›æœ¨æ¡¶çš„å®¹ç§¯è‚¯å®šéƒ½æ²¡æœ‰leftå’Œrightç»„æˆçš„æœ¨æ¡¶å®¹ç§¯å¤§,åä¹‹åŒç†ã€‚ä»£ç å¦‚ä¸‹ï¼š
+
 ```cpp
 class Solution {
 public:
@@ -30,4 +31,5 @@ public:
     }
 };
 ```
+
 

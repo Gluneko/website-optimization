@@ -10,7 +10,7 @@ tags: [ 'array' ]
 
 Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct. 
 
-ÕÒ³öÊı×éÖĞÊÇ·ñÓĞÖØ¸´Öµ¡£Ê¹ÓÃÒ»¸ö¹şÏ£±í±éÀúÊı×é£¬Èç¹û¹şÏ£±íÀï´æÔÚ£¬·µ»Øtrue,²»´æÔÚÔò½«µ±Ç°Öµ·ÅÈë¹şÏ£±íÖĞ£¬´úÂëÈçÏÂ£º
+æ‰¾å‡ºæ•°ç»„ä¸­æ˜¯å¦æœ‰é‡å¤å€¼ã€‚ä½¿ç”¨ä¸€ä¸ªå“ˆå¸Œè¡¨éå†æ•°ç»„ï¼Œå¦‚æœå“ˆå¸Œè¡¨é‡Œå­˜åœ¨ï¼Œè¿”å›true,ä¸å­˜åœ¨åˆ™å°†å½“å‰å€¼æ”¾å…¥å“ˆå¸Œè¡¨ä¸­ï¼Œä»£ç å¦‚ä¸‹ï¼š
 
 ```cpp
 class Solution {
@@ -31,7 +31,7 @@ public:
 
 Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.
 
-ÕâÌâÓëÉÏÌâµÄ²»Í¬Ö®´¦ÊÇÖØ¸´ÖµµÄ×ø±ê²î²»ÄÜ³¬¹ık£¬Ò²ÊÇÕÒ³öÒ»¶Ô¼´¿É¡£
+è¿™é¢˜ä¸ä¸Šé¢˜çš„ä¸åŒä¹‹å¤„æ˜¯é‡å¤å€¼çš„åæ ‡å·®ä¸èƒ½è¶…è¿‡kï¼Œä¹Ÿæ˜¯æ‰¾å‡ºä¸€å¯¹å³å¯ã€‚
 
 ```cpp
 class Solution {
@@ -46,4 +46,5 @@ public:
     }
 };
 ```
+
 ### Contains Duplicate III
