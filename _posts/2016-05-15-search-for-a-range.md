@@ -3,7 +3,7 @@ layout: post
 section-type: post
 title: Search for a Range
 category: leetcode
-tags: [ 'array' ]
+tags: [ 'array','Binary Search' ]
 ---
 
 ### Search for a Range
