@@ -1,7 +1,7 @@
 ---
 layout: post
 section-type: post
-title: Search for a Range
+title: Search Insert Position
 category: leetcode
 tags: [ 'array','Binary Search' ]
 ---
