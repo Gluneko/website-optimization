@@ -3,7 +3,7 @@ layout: post
 section-type: post
 title: Unique Paths I & II
 category: algorithms
-tags: [ 'Dynamic Programming','array' ]
+tags: [ 'dynamic programming','array' ]
 ---
 
 
@@ -70,9 +70,9 @@ public:
 ]
 </pre>
 <p>The total number of unique paths is&nbsp;<code>2</code>.</p>
-<p>Note:&nbsp;<em>m</em>&nbsp;and&nbsp;<em>n</em>&nbsp;will be at most 100.</p>
+<p>Note:&nbsp;<em>m</em>&nbsp;and&nbsp;<em>n</em>&nbsp;will be at most 100.</p>  
 
-这道题在路径中加了一些障碍物，还是用动态规划来解，不同的是当遇到为1的点，将该位置的dp数组中的值清零，其余和之前那道题并没有什么区别，代码如下：  
+这道题在路径中加了一些障碍物，还是用动态规划来解，不同的是当遇到为1的点，将该位置的dp数组中的值清零，其余和之前那道题并没有什么区别，空间复杂度也是O(n)（如同前面中分析的，如果要更加严谨，我们可以取行和列中小的那个，然后把小的放在内层循环，空间复杂度就是O(min(m,n))，时间复杂度还是O(m*n)。代码如下：  
 
 ```cpp
 class Solution {
