@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Unique Paths I & II
-category: algorithms
+category: leetcode
 tags: [ 'dynamic programming','array' ]
 ---
 
