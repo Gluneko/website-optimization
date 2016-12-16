@@ -1,55 +1,78 @@
-## Website Performance Optimization portfolio project
+###Udacity Front-End Web Developer Nanodegree – Project 04
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
-To get started, check out the repository and inspect the code.
+# Website Performance Optimization
 
-### Getting started
+###Project Requirements:
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+Optimize a online portfolio in terms of critical rendering path and frames per second (FPS).
 
-Some useful tips to help you get started:
+### Get started
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
+#### Part 1: Optimize PageSpeed Insights score for index.html
+
+- Download the project from Github.
+- Use the python server to display the website or go to the [live version](https://gluneko.github.io/)
 
   ```bash
   $> cd /path/to/your-project-folder
   $> python -m SimpleHTTPServer 8080
   ```
 
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
+- Open a browser and visit localhost:8080
+- Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
   ``` bash
   $> cd /path/to/your-project-folder
   $> ./ngrok http 8080
   ```
 
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
+- Copy the public URL ngrok gives you and paste it in the analyze field at [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) to view the scores.
 
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
+##### Optimizations
 
-####Part 2: Optimize Frames per Second in pizza.html
+1. index.html:
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+    - Using Grunt to compress images and minify js,cs,html files.The source codes are in src file and the processed codes are in dist file.In order to use grunt,you need to install [nodejs](https://nodejs.org/en/) first and then Grunt.
 
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+    ``` bash
+    npm install -g grunt-cli
+    cd /path/to/your-project-folder
+    npm install grunt --save-dev
+    npm install --save-dev grunt-contrib-copy grunt-contrib-clean grunt-contrib-imagemin grunt-contrib-cssmin grunt-contrib-uglify grunt-contrib-htmlmin
+    grunt
+    ```
 
-### Optimization Tips and Tricks
-* [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
-* [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
-* [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
-* [Avoiding Rendering Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css.html "render blocking css")
-* [Optimizing JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript.html "javascript")
-* [Measuring with Navigation Timing](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp.html "nav timing api"). We didn't cover the Navigation Timing API in the first two lessons but it's an incredibly useful tool for automated page profiling. I highly recommend reading.
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads.html">The fewer the downloads, the better</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
+    - Inline style.css,google font and add media query to print.css, Asynchronous loading of javascript files to prvent from render blocking.
 
-### Customization with Bootstrap
-The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
+#### Part 2: Optimize Frames per Second in pizza.html
 
-* <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
-* <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
+- Click on the "Cam's Pizzeria" link.
+
+- Use Dev Tools to show the page speed.
+
+
+##### Optimizations:
+
+1. views/css/style.css:
+
+	- Added below code to both `.mover` and `.randomPizzaContainer` class to increased the site performance with hardware accelerated CSS :
+
+    ``` bash
+    transform: translateZ(0);
+    will-change:transform;
+    ```
+
+2. views/js/main.js:
+
+	-	Removed function `determineDx` since it was redundant. Refactored the function `changePizzaSizes` using percentage width according to changes in size sliding bar. This avoids calculating pixel values repeatedly.Put `var len` in  the loop initialization so that they are not checked at each iteration.
+
+    -   Replaced all `querySelectorAll` with `getElementsByClassName` and Replaced all `querySelector` with `getElementById` for a more specific and time-saving query.
+
+	-	Refactored function `updatePositions` by taking `var phase` out of the loop to do 5 calculations once and then reference in for loop.Put `var len` in  the loop initialization.Changed `style.transform` instead of `style.left` in the loop to get rid of the need to trigger a read layout.
+
+    -   In scroll event listener using `requestAnimationFrame` to make sure function `updatePositions` isn't firing unnecessarily.
+
+    -   In DOMContentLoaded event listener,taking `getElementById` out of the loop,placing the var 'elem' in the loop initialization,Reducing number of pizzas from 200 to 24 since they are actually seen on the screen.Set the initial left value in the loop.
+
+

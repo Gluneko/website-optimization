@@ -33,12 +33,15 @@ form {
   position: fixed;
   width: 256px;
   z-index: -1;
-  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change:transform;
 }
 
 .randomPizzaContainer {
   float: left;
   display: flex;
+  transform: translateZ(0);
+  will-change:transform;
 }
 
 .randomPizzaContainer:after {
